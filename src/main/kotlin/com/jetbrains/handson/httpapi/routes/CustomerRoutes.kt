@@ -27,8 +27,8 @@ fun Route.customerRouting() {
             call.respond(customer)
         }
         post {
-            val custmer = call.receive<Customer>()
-            customerStorage.add(custmer)
+            val customer = call.receive<Customer>()
+            customerStorage.add(customer)
             call.respondText("Customer stored correctly", status = HttpStatusCode.Created)
 
         }
